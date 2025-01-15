@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fake News Detection System</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="C:\Users\KRITHIK\PycharmProjects\fake new\Predict.py" rel='predict' type='text/python'>
+
+<style>
+
+input[type=text], select, textarea {
+width: 50%;
+padding: 10px;
+border: 3px solid #ccc;
+border-radius: 1px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: horizontal;
+}
+button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 50%;
+}
+button:hover {
+opacity: 0.8;
+}
+h1 {
+text-align: center;
+}
+p {
+text-align: center;
+}
+div {
+text-align: center;
+}
+body {
+background: rgba(0, 128, 0, 0.3) /* Green
+background with 30% opacity */
+}
+</style>
+</head>
+<body>
+<div class="login">
+    <h1 style="text-align:center;">Fake News Detector</h1>
+    <p style="text-align:center;">By Lutfor Rafe(154429), Rabiul Alam Abir(160041026), Mashiat Nahreen(160041028)</p>
+    <form action="/predict" method="POST">
+        <textarea name="message" rows="6" cols="20" required="required" style="font-size: 18pt"></textarea>
+        <br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <div class="results">
+        {% if prediction == 'FAKE' %}
+        <h2 style="color:red;">Looking Spam⚠️News📰</h2>
+        {% elif prediction == 'REAL' %}
+        <h2 style="color:green;"><b>Looking Real News📰</b></h2>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>
